@@ -20,6 +20,8 @@
 		898CC3BD2436CDAE00F19E2F /* Page3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898CC3BC2436CDAE00F19E2F /* Page3ViewController.swift */; };
 		898CC3BF2436CDC000F19E2F /* Page4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898CC3BE2436CDC000F19E2F /* Page4ViewController.swift */; };
 		898CC3C12436CDCC00F19E2F /* Page5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898CC3C02436CDCC00F19E2F /* Page5ViewController.swift */; };
+		89B4BFB7248B5C52005EA5DD /* youtube.json in Resources */ = {isa = PBXBuildFile; fileRef = 89B4BFB6248B5C52005EA5DD /* youtube.json */; };
+		89B4BFB9248B5CF8005EA5DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B4BFB8248B5CF8005EA5DD /* ViewController.swift */; };
 		BF4EC03BABF7C663FDB4EECA /* Pods_YoutuberApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 988D18CAD48A63C76B38534A /* Pods_YoutuberApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +41,8 @@
 		898CC3BC2436CDAE00F19E2F /* Page3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page3ViewController.swift; sourceTree = "<group>"; };
 		898CC3BE2436CDC000F19E2F /* Page4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page4ViewController.swift; sourceTree = "<group>"; };
 		898CC3C02436CDCC00F19E2F /* Page5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page5ViewController.swift; sourceTree = "<group>"; };
+		89B4BFB6248B5C52005EA5DD /* youtube.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = youtube.json; sourceTree = "<group>"; };
+		89B4BFB8248B5CF8005EA5DD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8B1DE7CD4B3347D19FA0EF65 /* Pods-YoutuberApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoutuberApp.release.xcconfig"; path = "Target Support Files/Pods-YoutuberApp/Pods-YoutuberApp.release.xcconfig"; sourceTree = "<group>"; };
 		988D18CAD48A63C76B38534A /* Pods_YoutuberApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YoutuberApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC822623D7DD713A41446AD2 /* Pods-YoutuberApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoutuberApp.debug.xcconfig"; path = "Target Support Files/Pods-YoutuberApp/Pods-YoutuberApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -90,6 +94,7 @@
 				898CC3AE2434269D00F19E2F /* View */,
 				898CC3AD2434268D00F19E2F /* Controller */,
 				898CC3A7243423F900F19E2F /* Info.plist */,
+				89B4BFB6248B5C52005EA5DD /* youtube.json */,
 			);
 			path = YoutuberApp;
 			sourceTree = "<group>";
@@ -99,6 +104,7 @@
 			children = (
 				898CC399243423F800F19E2F /* AppDelegate.swift */,
 				898CC39B243423F800F19E2F /* SceneDelegate.swift */,
+				89B4BFB8248B5CF8005EA5DD /* ViewController.swift */,
 				898CC3B0243426F500F19E2F /* BaseViewController.swift */,
 				898CC3B82436C5BA00F19E2F /* WebViewController.swift */,
 				898CC3B424342D2300F19E2F /* Page1ViewController.swift */,
@@ -197,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				898CC3A6243423F900F19E2F /* LaunchScreen.storyboard in Resources */,
+				89B4BFB7248B5C52005EA5DD /* youtube.json in Resources */,
 				898CC3A3243423F900F19E2F /* Assets.xcassets in Resources */,
 				898CC3A1243423F800F19E2F /* Main.storyboard in Resources */,
 			);
@@ -255,6 +262,7 @@
 				898CC3B92436C5BA00F19E2F /* WebViewController.swift in Sources */,
 				898CC3BF2436CDC000F19E2F /* Page4ViewController.swift in Sources */,
 				898CC3B724342EC000F19E2F /* YoutubeData.swift in Sources */,
+				89B4BFB9248B5CF8005EA5DD /* ViewController.swift in Sources */,
 				898CC3BD2436CDAE00F19E2F /* Page3ViewController.swift in Sources */,
 				898CC3C12436CDCC00F19E2F /* Page5ViewController.swift in Sources */,
 				898CC3B524342D2300F19E2F /* Page1ViewController.swift in Sources */,

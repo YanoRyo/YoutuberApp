@@ -73,7 +73,7 @@ class Page2ViewController: UITableViewController,SegementSlideContentScrollViewD
         
     }
     func getData(){
-        var text = "https://www.googleapis.com/youtube/v3/search?key=AIzaSyAbF8VLMGyBSNe8R6YAPWD-ybpWOK3Ng9E&q=baseball&part=snippet&maxResults=40&order=date"
+        var text = "https://www.googleapis.com/youtube/v3/search?key=AIzaSyAbF8VLMGyBSNe8R6YAPWD-ybpWOK3Ng9E&q=野球&part=snippet&maxResults=40&order=date"
         let url = text.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
         
 //        リクエストを送る

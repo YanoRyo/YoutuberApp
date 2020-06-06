@@ -20,13 +20,17 @@ class BaseViewController: SegementSlideViewController {
 
         // Do any add itional setup after loading the view.
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = true
+    }
     
     override var headerView: UIView?{
         let headerView = UIImageView()
         headerView.isUserInteractionEnabled = true
         headerView.contentMode = .scaleToFill
         headerView.image = UIImage(named: "header")
-        headerView.translatesAutoresizingMaskIntoConstraints = false
+        headerView.translatesAutoresizingMaskIntoConstraints = true
         let headerHeight:CGFloat
         if #available(iOS 11.0, *){
             headerHeight = view.frame.height / 4 + view.safeAreaInsets.top
@@ -36,6 +40,7 @@ class BaseViewController: SegementSlideViewController {
         headerView.heightAnchor.constraint(equalToConstant: headerHeight).isActive = true
         return headerView
     }
+    
     
     override var titlesInSwitcher: [String]{
         return ["K-POP","Baseball","Youtuber","Toronto","Corona",]

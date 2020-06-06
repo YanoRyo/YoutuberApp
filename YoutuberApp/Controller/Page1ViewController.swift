@@ -85,44 +85,6 @@ class Page1ViewController: UITableViewController,SegementSlideContentScrollViewD
         return 1
         
     }
-    func getData(){
-        var text = "https://www.googleapis.com/youtube/v3/search?key=AIzaSyAbF8VLMGyBSNe8R6YAPWD-ybpWOK3Ng9E&q=K-POP&part=snippet&maxResults=40&order=date"
-        let url = text.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
-        
-//        リクエストを送る
-        AF.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default).responseJSON{ (response) in
-            //        json解析を行う
-            //        40個帰ってくるのでfor文で全てを配列に入れる
-            print(response)
-            switch response.result{
-            case .success:
-                for i in 0...19{
-                    
-                    let json:JSON = JSON(response.data as Any)
-                    let videoId = json["items"][i]["id"]["videoId"].string
-                    let publishedAt = json["items"][i]["snippet"]["publishedAt"].string
-                    let title = json["items"][i]["snippet"]["title"].string
-                    let imageURLString = json["items"][i]["snippet"]["thumbnails"]["default"]["url"].string
-                    let youtubeURL = "https://www.youtube.com/watch?v=\(videoId!)"
-                    let channelTitle = json["items"][i]["snippet"]["channelTitle"].string
-                    
-                    self.videoIdArray.append(videoId!)
-//                    self.publishedAtArray.append(publishedAt!)
-                    self.titleArray.append(title!)
-                    self.imageURLStringArray.append(imageURLString!)
-                    self.youtubeURLArray.append(youtubeURL)
-                    self.channelTitleArray.append(channelTitle!)
-                }
-                
-                break
-                
-            case.failure(let error):
-                print(error)
-                break
-            }
-            self.tableView.reloadData()
-        }
-    }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let indexNumber = indexPath.row
@@ -133,14 +95,47 @@ class Page1ViewController: UITableViewController,SegementSlideContentScrollViewD
         
         
     }
-    /*
-    // MARK: - Navigation
+    
+    
+    func getData(){
+        var text = "https://www.googleapis.com/youtube/v3/search?key=AIzaSyAbF8VLMGyBSNe8R6YAPWD-ybpWOK3Ng9E&q=K-POP&part=snippet&maxResults=40&order=date"
+        let url = text.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+//        リクエストを送る
+        AF.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default).responseJSON{ (response) in
+            //        json解析を行う
+            //        40個帰ってくるのでfor文で全てを配列に入れる
+            print(response)
+            switch response.result{
+            case .success:
+                for i in 0...19{
+
+                    let json:JSON = JSON(response.data as Any)
+                    let videoId = json["items"][i]["id"]["videoId"].string
+                    let publishedAt = json["items"][i]["snippet"]["publishedAt"].string
+                    let title = json["items"][i]["snippet"]["title"].string
+                    let imageURLString = json["items"][i]["snippet"]["thumbnails"]["default"]["url"].string
+                    let youtubeURL = "https://www.youtube.com/watch?v=\(videoId!)"
+                    let channelTitle = json["items"][i]["snippet"]["channelTitle"].string
+
+                    self.videoIdArray.append(videoId!)
+//                    self.publishedAtArray.append(publishedAt!)
+                    self.titleArray.append(title!)
+                    self.imageURLStringArray.append(imageURLString!)
+                    self.youtubeURLArray.append(youtubeURL)
+                    self.channelTitleArray.append(channelTitle!)
+                }
+
+                break
+
+            case.failure(let error):
+                print(error)
+                break
+            }
+            self.tableView.reloadData()
+        }
     }
-    */
 
+    
+   
 }
